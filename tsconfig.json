@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
+    /* target: foi configurado para mostrar erro nos imports do TS */
     "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
+    "module": "nodenext" /* Specify what module code is generated. */,
+    "moduleResolution": "nodenext" /* Specify how TypeScript looks up a file from a given module specifier. */,
+    "outDir": "./dist" /* Redirect output structure to the directory. */,
+    "rootDir": "./src" /* Specify the root directory of input files. Use to control the output directory structure with 'outDir'. */,
   }
 }
