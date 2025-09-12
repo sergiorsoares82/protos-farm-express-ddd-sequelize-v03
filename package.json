@@ -12,7 +12,7 @@
     "lint:fix": "eslint . --fix",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
-    "services:up": "docker compose -f docker/compose.yaml up -d"
+    "services:up": "docker compose -f .docker/compose.yaml up -d"
   },
   "keywords": [],
   "author": "",
