@@ -13,9 +13,7 @@ services:
   dev-database:
     container_name: dev-database
     image: postgres:16.0-alpine3.18
-    environment:
-      - POSTGRES_DB=devdb
-      - POSTGRES_USER=devuser
-      - POSTGRES_PASSWORD=devpass
+    env_file:
+      - ../env/.env
     ports:
       - '5433:5432'
