@@ -7,6 +7,12 @@ export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
     languageOptions: { globals: globals.browser },
+    plugins: ['simple-import-sort'],
+    rules: {
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
+      'prettier/prettier': 'error',
+    },
   },
   tseslint.configs.recommended,
   {
