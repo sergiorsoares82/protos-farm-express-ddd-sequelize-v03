@@ -10,3 +10,12 @@ services:
       - ..:/app
       # Impede que o node_modules do host sobrescreva o do contêiner e vice-versa
       - /app/node_modules
+  dev-database:
+    container_name: dev-database
+    image: postgres:16.0-alpine3.18
+    environment:
+      - POSTGRES_DB=devdb
+      - POSTGRES_USER=devuser
+      - POSTGRES_PASSWORD=devpass
+    ports:
+      - '5433:5432'
