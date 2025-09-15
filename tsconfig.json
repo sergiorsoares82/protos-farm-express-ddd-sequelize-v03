@@ -1,11 +1,25 @@
 {
   "compilerOptions": {
-    /* target: foi configurado para mostrar erro nos imports do TS */
-    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
-    "module": "nodenext" /* Specify what module code is generated. */,
-    "moduleResolution": "nodenext" /* Specify how TypeScript looks up a file from a given module specifier. */,
-    "outDir": "./dist" /* Redirect output structure to the directory. */,
-    "rootDir": "./src" /* Specify the root directory of input files. Use to control the output directory structure with 'outDir'. */
-  }
+    "target": "es2021", // Atualize para um target moderno que o Node.js 16+ suporta bem.
+    "module": "nodenext", // Ótimo para o Node.js entender como ES Modules.
+    "moduleResolution": "nodenext", // Ótimo para o Node.js resolver módulos ES.
+    "esModuleInterop": true, // **CRUCIAL:** Ajuda na interoperabilidade entre CommonJS e ES Modules.
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "allowSyntheticDefaultImports": true, // Complementa esModuleInterop
+    "experimentalDecorators": true, // Se estiver usando decorators do TypeScript
+    "emitDecoratorMetadata": true // Se estiver usando reflect-metadata com decorators
+  },
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts",
+    "jest.config.ts"
+  ], // Certifique-se de incluir seus arquivos de teste
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
