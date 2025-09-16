@@ -1,4 +1,4 @@
-import { sequelize } from './sequelize';
+import { sequelize } from '../sequelize';
 
 describe('Sample Test', () => {
   it('should pass', async () => {
