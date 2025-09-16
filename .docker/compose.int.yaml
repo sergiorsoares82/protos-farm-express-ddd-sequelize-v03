@@ -1,0 +1,19 @@
+services:
+  backend-app:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - '3001:3000'
+    volumes:
+      # Monta o diretório do projeto local no /app do contêiner para hot-reloading
+      - ..:/app
+      # Impede que o node_modules do host sobrescreva o do contêiner e vice-versa
+      - /app/node_modules
+  dev-database:
+    container_name: dev-database
+    image: postgres:16.0-alpine3.18
+    env_file:
+      - ../.env/.env
+    ports:
+      - '5434:5432'
