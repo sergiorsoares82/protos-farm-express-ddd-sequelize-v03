@@ -13,13 +13,6 @@
     "experimentalDecorators": true, // Se estiver usando decorators do TypeScript
     "emitDecoratorMetadata": true // Se estiver usando reflect-metadata com decorators
   },
-  "include": [
-    "src/**/*.ts",
-    "tests/**/*.ts",
-    "jest.config.ts"
-  ], // Certifique-se de incluir seus arquivos de teste
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src/**/*.ts", "tests/**/*.ts", "jest.config.ts"], // Certifique-se de incluir seus arquivos de teste
+  "exclude": ["node_modules", "dist"]
 }
