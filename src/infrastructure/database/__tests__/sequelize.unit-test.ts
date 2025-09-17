@@ -1,8 +1,8 @@
-import { sequelize } from '../sequelize';
+import { createSequelizeInstance } from '../sequelize';
 
 describe('Sample Test', () => {
   it('should pass', async () => {
-    const database = sequelize;
+    const database = createSequelizeInstance();
     expect(database).toBeDefined();
     expect(database.getDialect()).toBe('sqlite');
     expect(database.options.dialect).toBe('sqlite');

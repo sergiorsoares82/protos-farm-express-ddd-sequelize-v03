@@ -27,7 +27,7 @@ export const configDatabaseOptions = () => {
     return {
       dialect: (process.env.DB_DIALECT as Dialect) || 'postgres',
       host: process.env.DB_HOST || 'localhost',
-      port: process.env.POSTGRES_PORT
+      port: Number(process.env.POSTGRES_PORT)
         ? Number(process.env.POSTGRES_PORT)
         : undefined,
       username: process.env.POSTGRES_USER,
@@ -36,5 +36,3 @@ export const configDatabaseOptions = () => {
     };
   }
 };
-
-console.log('config(): ', configDatabaseOptions());
